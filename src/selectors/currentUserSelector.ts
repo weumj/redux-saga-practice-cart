@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
 export const currentUserSelector = createSelector(
-    state => state.get(`currentUser`),
+    (state: Map<string, any>) => state.get(`currentUser`),
     currentUser => currentUser,
 );

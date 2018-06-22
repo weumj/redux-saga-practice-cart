@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
 export const shippingFetchStatusSelector = createSelector(
-    state => state.get(`shippingFetchStatus`),
+    (state: Map<string, any>) => state.get(`shippingFetchStatus`),
     shippingFetchStatus => shippingFetchStatus,
 );

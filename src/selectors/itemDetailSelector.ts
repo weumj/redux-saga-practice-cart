@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
 export const itemsDetailSelector = createSelector(
-    state => state.get(`items`),
+    (state: Map<string, any>) => state.get(`items`) as any[],
     items => items,
 );

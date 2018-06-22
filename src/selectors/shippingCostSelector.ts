@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
 export const shippingCostSelector = createSelector(
-    state => state.get(`shippingCost`),
+    (state: Map<string, any>) => state.get(`shippingCost`),
     shippingCost => shippingCost,
 );

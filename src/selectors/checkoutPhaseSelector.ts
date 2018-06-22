@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
 export const checkoutPhaseSelector = createSelector(
-    state => state.get("checkoutPhase"),
+    (state: Map<string, any>) => state.get("checkoutPhase") as string,
     checkoutPhase => checkoutPhase,
 );

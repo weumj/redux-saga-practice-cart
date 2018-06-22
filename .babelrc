@@ -1,0 +1,25 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions"
+        ]
+      },
+      "loose": false,
+      "modules": false,
+      "useBuiltIns": true,
+      "include": [],
+      "exclude": [
+      ]
+    }],
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-decorators",
+    "transform-react-constant-elements",
+    "transform-react-inline-elements"
+  ]
+}

@@ -1,8 +1,8 @@
 const express = require("express");
+const YAML = require("yamljs");
 const cors = require("cors");
 const port = 8081;
 const app = new express();
-const YAML = require("yamljs");
 
 const serverDelayConstant = 100;
 // Simulate a small amount of delay to demonstrate app's async features
@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 
 app.use(express.static("public"));
 
-nativeObject = YAML.load("database.yml", database => {
+nativeObject = YAML.load("./server/database.yml", database => {
     const makeCartAdjustmentRoute = (shouldAdd = true) => (req, res) => {
         const { owner, itemID } = req.params;
         const cart = database.carts.find(cart => cart.owner === owner);

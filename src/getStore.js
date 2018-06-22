@@ -19,6 +19,8 @@ const logger = createLogger({
     stateTransformer,
 });
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 export const getStore = () => {
     const sagaMiddleware = createSagaMiddleware();
     const middleWares = [thunk, sagaMiddleware];
@@ -26,7 +28,7 @@ export const getStore = () => {
         middleWares.push(logger);
     }
     const composables = [applyMiddleware(...middleWares)];
-    const enhancer = compose(...composables);
+    const enhancer = composeEnhancers(...composables);
     const store = createStore(reducer, defaultState, enhancer);
 
     initSagas(sagaMiddleware);

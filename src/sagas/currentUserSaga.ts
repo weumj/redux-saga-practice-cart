@@ -1,5 +1,5 @@
 import { take, put, call, apply, CallEffectFn } from "redux-saga/effects";
-import * as fetch from "isomorphic-fetch";
+import fetch from "isomorphic-fetch";
 
 import { GET_CURRENT_USER_INFO, setCurrentUser } from "../actions";
 

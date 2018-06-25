@@ -5,7 +5,7 @@ import {
     takeLatest,
     CallEffectFn,
 } from "redux-saga/effects";
-import * as fetch from "isomorphic-fetch";
+import fetch from "isomorphic-fetch";
 
 import {
     INCREASE_ITEM_QUANTITY,

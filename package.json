@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-cache",
+    "test": "jest",
     "start": "node scripts/devServer.js",
     "server": "node ./server"
   },
